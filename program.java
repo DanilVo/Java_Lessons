@@ -11,9 +11,10 @@
 // 1000
 // import java.io.IOException;
 // import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+// import java.io.File;
+// import java.io.FileNotFoundException;
+// import java.io.FileReader;
+// import java.util.Scanner;
 // import java.io.FileWriter;
 // public class program {
 //     public static void main(String[] args) {
@@ -28,18 +29,31 @@ import java.io.FileReader;
 //         }
 //         }
 //     }
-import java.util.Scanner;
 
-/**
- * program
- */
+import java.io.File;  // Import the File class
+import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.util.ArrayList;
+import java.util.Scanner; // Import the Scanner class to read text files
+import java.util.*;
 public class program {
-
-    public static void main(String[] args) throws Exception {
-        FileReader file = new FileReader("C:\\Users\\משתמש\\OneDrive\\Desktop\\input.txt");
-        
-        int i;
-        while ((i = file.read()) != -1)
-        System.out.print((char)i);
+  public static void main(String[] args) {
+    try {
+      File myObj = new File("C:\\Users\\משתמש\\OneDrive\\Desktop\\java project\\input.txt");
+      Scanner myReader = new Scanner(myObj);
+      if (myReader.hasNextLine()) {
+          int[] ls = new int[2];
+          String data = myReader.nextLine();
+          String datanew = data.replaceAll("([a-z= ])", "");
+          int newty = Integer.parseInt(datanew);
+          for (int i = 0; i < ls.length; i++) {
+              ls[i] = newty;
+          }
+          System.out.println(Arrays.toString(ls));
+      }
+      myReader.close();
+    } catch (FileNotFoundException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
     }
-}   
+  }
+}
