@@ -38,18 +38,18 @@ import java.util.*;
 public class program {
   public static void main(String[] args) {
     try {
-      File myObj = new File("C:\\Users\\משתמש\\OneDrive\\Desktop\\java project\\input.txt");
+      File myObj = new File("C:\\Users\\dani7\\Desktop\\java lessons\\input.txt");
       Scanner myReader = new Scanner(myObj);
-      if (myReader.hasNextLine()) {
-          int[] ls = new int[2];
+      int[] ls = new int[2];
+      int i = 0;
+      while (myReader.hasNextLine()) {
           String data = myReader.nextLine();
           String datanew = data.replaceAll("([a-z= ])", "");
           int newty = Integer.parseInt(datanew);
-          for (int i = 0; i < ls.length; i++) {
-              ls[i] = newty;
-          }
-          System.out.println(Arrays.toString(ls));
-      }
+          ls[i] = newty;
+          i += 1;
+        }
+        System.out.println(Math.pow(ls[0], ls[1]));
       myReader.close();
     } catch (FileNotFoundException e) {
       System.out.println("An error occurred.");
