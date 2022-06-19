@@ -30,30 +30,44 @@
 //         }
 //     }
 
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;  // Import this class to handle errors
-import java.util.ArrayList;
-import java.util.Scanner; // Import the Scanner class to read text files
-import java.util.*;
+// import java.io.File;  // Import the File class
+// import java.io.FileNotFoundException;  // Import this class to handle errors
+// import java.util.ArrayList;
+// import java.util.Scanner; // Import the Scanner class to read text files
+// import java.util.*;
+// public class program {
+//   public static void main(String[] args) {
+//     try {
+//       File myObj = new File("C:\\Users\\dani7\\Desktop\\java lessons\\input.txt");
+//       Scanner myReader = new Scanner(myObj);
+//       int[] ls = new int[2];
+//       int i = 0;
+//       while (myReader.hasNextLine()) {
+//           String data = myReader.nextLine();
+//           String datanew = data.replaceAll("([a-z= ])", "");
+//           int newty = Integer.parseInt(datanew);
+//           ls[i] = newty;
+//           i += 1;
+//         }
+//         System.out.println(Math.pow(ls[0], ls[1]));
+//       myReader.close();
+//     } catch (FileNotFoundException e) {
+//       System.out.println("An error occurred.");
+//       e.printStackTrace();
+//     }
+//   }
+// }
+
+
+/**
+ * program
+ */
 public class program {
   public static void main(String[] args) {
-    try {
-      File myObj = new File("C:\\Users\\dani7\\Desktop\\java lessons\\input.txt");
-      Scanner myReader = new Scanner(myObj);
-      int[] ls = new int[2];
-      int i = 0;
-      while (myReader.hasNextLine()) {
-          String data = myReader.nextLine();
-          String datanew = data.replaceAll("([a-z= ])", "");
-          int newty = Integer.parseInt(datanew);
-          ls[i] = newty;
-          i += 1;
-        }
-        System.out.println(Math.pow(ls[0], ls[1]));
-      myReader.close();
-    } catch (FileNotFoundException e) {
-      System.out.println("An error occurred.");
-      e.printStackTrace();
-    }
+    int n = 10;
+  for (int i = 1; i < n; i++) {
+    double d = (i*(i+1)*0.5);
+    System.out.println((int)d);
   }
+}
 }
