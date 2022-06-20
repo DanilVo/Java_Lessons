@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Calculator {
+    // Class that allows us do simple such a rational calculations,
+    // and more complicated such as complex calculations
     public static void main(String[] args) {
 
         int type;
@@ -8,6 +10,7 @@ public class Calculator {
         Scanner myObj = new Scanner(System.in);
         System.out.println("welcome to complex and rational calculator!");
         System.out.println("To calculate complex equanties press 1 or for rational press 2");
+        // try-catch to catch errors
         try {
             type = myObj.nextInt();
             if (type == 1) {
@@ -16,11 +19,10 @@ public class Calculator {
             if (type == 2) {
                 complex_calc();
             } else {
-                System.out.println("choose 1 or 2");
+                System.out.println("Choose only 1 or 2!");
             }
         } catch (Exception e) {
             System.out.println("Invalid operator!\nTry again!");
-
         }
         myObj.close();
     }
@@ -69,7 +71,7 @@ public class Calculator {
     }
 
     static void complex_calc() {
-
+        //whole elements we using
         char operator;
         double num1, num2, num3, num4, result1, result2;
 
